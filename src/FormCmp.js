@@ -9,12 +9,12 @@ class FormCmp extends Component {
 
         return(
             <form>
-                <label for="fistName"> First name: </label>
-                <input value={this.props.formData.firstName} type="text" name="firstName" /> <br />
-                <label for="lastName"> Last name: </label>
-                <input value={this.props.formData.lastName} type="text" name="lastName" /> <br />
-                <label for="age"> Age: </label>
-                <input value={this.props.formData.age} type="number" name="age" />
+                <label htmlFor="fistName"> First name: </label>
+                <input value={this.props.formData.firstName} type="text" id="firstName" /> <br />
+                <label htmlFor="lastName"> Last name: </label>
+                <input value={this.props.formData.lastName} type="text" id="lastName" /> <br />
+                <label htmlFor="age"> Age: </label>
+                <input value={this.props.formData.age} type="number" id="age" />
             </form>
         )
     }

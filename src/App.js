@@ -3,13 +3,14 @@ import logo from './logo.svg';
 import './App.css';
 
 
+import { AppContext } from './app-context';
 import FormCmp from './FormCmp';
-import { data, AppContext } from './app-context';
+import FormDataProvider from './FormDataProvider';
 
 class App extends Component {
   render() {
     return (
-      <AppContext.Provider value={data}>
+      <FormDataProvider>
         <div>
           <AppContext.Consumer>
             {
@@ -19,7 +20,7 @@ class App extends Component {
             }
           </AppContext.Consumer>
         </div>
-      </AppContext.Provider>
+      </FormDataProvider>
     );
   }
 }
