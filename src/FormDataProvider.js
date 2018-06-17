@@ -7,11 +7,20 @@ class FormDataProvider extends Component {
     constructor(props) {
         super(props);
 
-        this.state = data;
+        this.state = {
+            ...data,
+            onFirstNameChange: this.onFirstNameChange
+        }
+    }    
+
+    onFirstNameChange = (name) => {
+        this.setState({
+            formData: {
+                ...this.state.formData,
+                firstName: name
+            }
+        })
     }
-
-    
-
 
     render() {
 

@@ -3,14 +3,17 @@ import React, { Component } from 'react';
 class FormCmp extends Component {
 
 
-    render() {
+    firstNameChange = e => {
+        e.preventDefault();
+        this.props.onFirstNameChange(e.target.value);
+    }
 
-        console.log('props - ', this.props);
+    render() {
 
         return(
             <form>
                 <label htmlFor="fistName"> First name: </label>
-                <input value={this.props.formData.firstName} type="text" id="firstName" /> <br />
+                <input value={this.props.formData.firstName} onChange={this.firstNameChange} type="text" id="firstName" /> <br />
                 <label htmlFor="lastName"> Last name: </label>
                 <input value={this.props.formData.lastName} type="text" id="lastName" /> <br />
                 <label htmlFor="age"> Age: </label>

@@ -5,7 +5,10 @@ export const data = {
         firstName: 'Name',
         lastName: 'LName',
         age: 25
-    }
+    },
+    onFirstNameChange: (fName) => {},
+    onLastNameChange: (lName) => {},
+    onAgeChange: (age) => {}
 }
 
 export const AppContext = React.createContext();
